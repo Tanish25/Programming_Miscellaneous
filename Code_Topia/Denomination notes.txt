@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+    int a[]={100,50,10,5,2,1};
+    int n,r,t=0;
+    cout<<"enter total amount"<<endl;
+    cin>>n;
+    r=n;
+    for(int i=0;i<6;i++)
+    {
+        t=t+r/a[i];
+        r=r%a[i];
+         if(r==0)
+         {
+             break;
+         }
+    }
+    cout<<"minimum notes = "<<t;
+    return 0;
+}

@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1619509233 source:h:\infinite loops game\word_game\word_game.c
+	<stdio.h>
+

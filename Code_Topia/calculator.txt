@@ -1,0 +1,83 @@
+#include <iostream>
+using namespace std;
+void add()//function prototype
+{
+    int a=10;
+    int b=5;
+    int c=(a+b);
+    cout<<c;
+}
+int main()
+{
+    add();
+    return 0;
+}
+
+
+
+#include <iostream>
+using namespace std;
+int c;
+int add(int a, int b)
+{
+   c=a+b;
+   return c;
+}
+int difference(int a, int b)
+{
+   c=a-b;
+   return c;
+}
+int multiply(int a, int b)
+{
+   c=a*b;
+   return c;
+}
+int division(int a, int b)//should use float to not miss decimal places
+{
+ if(b==0)
+ {cout<<"Not defined";
+}c=a/b;
+   return c;}
+int main()
+{
+    int fn,sn; //fn=first number, sn=second number
+    char sign;
+
+    cin>>fn;
+
+    cin>>sign;
+cin>>sn;
+
+    if(sign=='+')
+    cout<<add(fn,sn);
+    else if(sign=='-')
+    cout<<difference(fn,sn);
+    else if(sign=='*')
+    cout<<multiply(fn,sn);
+    else if(sign=='/')
+    cout<<division(fn,sn);
+    else
+    cout<<"error";
+
+
+
+}
+
+
+
+
+    switch(sign)
+{
+case'+': cout<<add(fn,sn);
+break;
+case'-':  cout<<difference(fn,sn);
+break;
+case'*': cout<<multiply(fn,sn);
+break;
+case'/': cout<<division(fn,sn);
+break;
+default: cout<<"error";
+}
+
+

@@ -1,0 +1,44 @@
+int main()
+{
+    int n;
+    printf("enter number of elements");
+    scanf("%d",&n);
+    int arr[n];
+    int count=0;
+    for(int i=0;i<n;i++)
+    scanf("%d",&arr[i]);
+    quickSort(arr,0,n);
+    for(int i=0;i<n;){
+        count=0;
+        for(int j=i;j<n;j++){
+            if(arr[i]==arr[j])
+            {
+                count++;
+            }
+            else{
+                break;
+            }
+        }
+        printf("frequency of %d is %d\n",arr[i],count);
+        i=i+count;
+    }
+
+}
+
+
+#include<stdio.h>
+
+int main()
+{
+    int arr[7] = {1,2,3,4,2,3,3};
+    int count[100] = {0};
+    
+    for(int i=0; i<7; i++)
+    {
+    count[arr[i]]++;
+    }
+
+    printf("frequency of 3 is %d",count[3]);
+    
+    return 0;
+}

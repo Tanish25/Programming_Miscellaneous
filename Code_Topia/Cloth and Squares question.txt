@@ -1,0 +1,75 @@
+ CNiteesh Kamal Chaudhary12:43 PM
+#include <iostream>
+using namespace std;
+int main(){
+    int a,b;
+    cin>> a>> b;
+    while (a%b != 0){
+        int a2= b;
+        int b2= a%b;
+        a = a2;
+        b = b2;
+
+    }
+    cout << b<< endl;
+}
+this is euclides algo
+Niteesh Kamal Chaudhary1:02 PM
+20 squares
+1000 side length
+Niteesh Kamal Chaudhary1:04 PM
+mela code ye tha
+// g.c.d.
+
+#include<iostream>
+using namespace std;
+#include <chrono>
+
+typedef long long ll;
+
+
+int gcd(int a,int b)
+{
+    int g=1;
+    if(a==0)
+    {
+        return b;
+    }
+    else if(b==0)
+    {
+        return a;
+    }
+    for(int i=2;i<4;i++){
+        if(a%i==0 and b%i==0)
+        {
+            a=a/i;
+            g*=i;
+            i--;
+        }
+    }
+
+    for(int i=1;(6*i-1)<=a && (6*i-1)<=b;i++)
+    {
+        int num=6*i-1;
+        int num2=6*i+1;
+        if(a%num==0 and b%num==0)
+        {
+Niteesh Kamal Chaudhary1:08 PM
+#include <iostream>
+using namespace std;
+// Recursive function to return gcd of a and b
+int gcd(int a, int b)
+{
+    if (b == 0)
+        return a;
+    return gcd(b, a % b); 
+     
+}
+  
+// Driver program to test above function
+int main()
+{
+    int a = 98, b = 56;
+    cout<<"GCD of "<<a<<" and "<<b<<" is "<<gcd(a, b);
+    return 0;
+}
